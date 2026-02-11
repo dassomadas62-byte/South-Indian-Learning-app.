@@ -1,4 +1,39 @@
-# South-Indian-Learning-app.
+export interface VideoConfig {
+  maxUploadSizeMB: number;
+  allowedFormats: string[];
+  recording: {
+    maxDurationSec: number;
+    resolution: string;
+    frameRate: number;
+  };
+  streaming: {
+    enabled: boolean;
+    defaultQuality: string;
+  };
+}
+
+const videoConfig: VideoConfig = {
+  maxUploadSizeMB: 100,
+
+  allowedFormats: [
+    "mp4",
+    "webm",
+    "mov"
+  ],
+
+  recording: {
+    maxDurationSec: 300, // 5 minutes
+    resolution: "720p",
+    frameRate: 30
+  },
+
+  streaming: {
+    enabled: true,
+    defaultQuality: "720p"
+  }
+};
+
+export default videoConfig;# South-Indian-Learning-app.
 it is a app where people can learn South Indian languages by conversation with ai ,others talk un their native language and the ai talk in South Indian languages which they have chosen.but after many practice the ai speak in English and other in South Indian.
 {
   "name": "south-language-ai-app",
